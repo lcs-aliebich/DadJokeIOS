@@ -13,6 +13,7 @@
 		1F0C77C625800C2700081407 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0C77C525800C2700081407 /* Preview Assets.xcassets */; };
 		1F0C77D125800C2700081407 /* DadJokeIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C77D025800C2700081407 /* DadJokeIOSTests.swift */; };
 		1F0C77DC25800C2700081407 /* DadJokeIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C77DB25800C2700081407 /* DadJokeIOSUITests.swift */; };
+		1F0C77ED25800C8300081407 /* DadJokeIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C77EC25800C8300081407 /* DadJokeIOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1F0C77D725800C2700081407 /* DadJokeIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DadJokeIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0C77DB25800C2700081407 /* DadJokeIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokeIOSUITests.swift; sourceTree = "<group>"; };
 		1F0C77DD25800C2700081407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F0C77EC25800C8300081407 /* DadJokeIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokeIOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		1F0C77B225800C2300081407 = {
 			isa = PBXGroup;
 			children = (
+				1F0C77EC25800C8300081407 /* DadJokeIOS.swift */,
 				1F0C77BD25800C2300081407 /* DadJokeIOS */,
 				1F0C77CF25800C2700081407 /* DadJokeIOSTests */,
 				1F0C77DA25800C2700081407 /* DadJokeIOSUITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F0C77C125800C2300081407 /* ContentView.swift in Sources */,
+				1F0C77ED25800C8300081407 /* DadJokeIOS.swift in Sources */,
 				1F0C77BF25800C2300081407 /* DadJokeIOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
