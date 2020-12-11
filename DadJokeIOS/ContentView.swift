@@ -10,22 +10,42 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var theJoke = ""
+    @State private var favouriteJokes: [FavouriteJoke] = []
+    @State private var addedtoFavourite = false
     
     var body: some View {
-       
+        
         NavigationView() {
             VStack(alignment: .center) {
+                Image("dadjoke.jpg")
+                    .resizable()
+                    .scaledToFit()
+                
                 Button(action: {
                     fetchJoke()
                 }, label: {
                     Text("Generate Random Dad Joke!")
                 })
-                Text(theJoke)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                
+                Button(action: {
+                    favouriteJokes.append(FavouriteJoke(joke: theJoke))
+                    addedtoFavourite = true
                     
+                }, label: {
+                    Text("Mark as favourite")
+                })
+                .disabled(addedtoFavourite)
+                
+                Text(theJoke)
+                    .padding(.horizontal)
+                   
+                List(favouriteJokes) { currentJoke in
+                    Text(currentJoke.joke)
+                }
+                
                 
             }
+            
             .navigationTitle("Dad Joke")
             
             .onAppear() {
@@ -64,11 +84,13 @@ struct ContentView: View {
                 
                 print("Joke data decoded from JSON successfully")
                 print("The Joke is: \(decodedJokeData.joke)")
-
+                
                 // Update the UI on the main thread
                 DispatchQueue.main.async {
                     theJoke = decodedJokeData.joke
+                    addedtoFavourite = false
                 }
+                
                 
             } else {
                 
@@ -79,8 +101,8 @@ struct ContentView: View {
         
     }
     
-
-      
+    
+    
 }
 
 
